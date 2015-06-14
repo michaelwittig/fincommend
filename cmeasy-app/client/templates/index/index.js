@@ -11,6 +11,7 @@ Template.index.events({
     },
     'click .plus': function(event){
         console.log("You clicked minus");
+        event.target.style.color = 'green'
     },
     'click .checked': function(event){
         console.log("You clicked checked");
@@ -31,4 +32,5 @@ Template.index.helpers({
         return Session.get('actualTime')
     }
 });
+
 

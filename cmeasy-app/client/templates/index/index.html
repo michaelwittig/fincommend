@@ -38,10 +38,15 @@
                                   <i class="icon ion-checkmark-circled" style="color: #2a576e; font-size: 32px; text-decoration: none;"></i>
                               {{/if}}
                           </div>
-                          <div class="col col-90" style="text-align: left">
+                          <div class="col col-70" style="text-align: left">
                               <a href="infodetails" style="text-decoration: none;">
                                   <h2 style="color: #f8f8f8;">Buy {{instrument.name}}</h2>
-                                  <p style="color: #8c8c9e; font-size: 10px;">Channel {{source}}</p>
+                                  <p style="color: #8c8c9e; font-size: 10px;">{{formatChannel source}}</p>
+                              </a>
+                          </div>
+                          <div class="col col-20" style="text-align: left">
+                              <a href="infodetails" style="text-decoration: none; text-align: right;">
+                                  <h2 style="color: #f8f8f8;">{{formatNumber instrument.price}}€ </h2>
                               </a>
                           </div>
 

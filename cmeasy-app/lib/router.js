@@ -22,7 +22,7 @@ Router.map(function() {
           recommends = Recommendations.find({}).fetch()
           console.log(recommends)
           return {
-              recommends: Recommendations.find({})
+              recommends: Recommendations.find({},{sort: {score: -1}, limit:20})
               };
     }
   });

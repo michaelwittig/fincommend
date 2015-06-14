@@ -52,7 +52,7 @@ if (Meteor.isServer) {
   });
 
   Meteor.publish('recommendations', function () {
-    return Recommendations.find({})
+    return Recommendations.find({},{sort: {score: -1}, limit:20})
   });
 }
 

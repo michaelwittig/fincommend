@@ -6,6 +6,19 @@ UI.registerHelper('formatTime', function(context, options) {
         return moment(context).format('DD.MM.YY hh:mm');
 });
 
+UI.registerHelper('formatChannel', function(context) {
+    if('cosrec' == context){
+      return 'Similiar to your stocks'
+    }
+    if('popular' == context){
+        return 'Top Stock!'
+    }
+    if('social' == context){
+        return 'Stocks from similiar portfolios'
+    }
+
+});
+
 UI.registerHelper('formatNumber', function(context, options) {
     if(context)
         context = context.toFixed(2) + '';
