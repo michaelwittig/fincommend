@@ -1,0 +1,104 @@
+<template name="preferences">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      <div class="list list-inset">
+          <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search">
+          </label>
+      </div>
+
+      {{#ionList}}
+          {{#ionItem class="item newsitem" path="channeldetail"  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                          <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-80" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Social Portfolio</h2>
+                      <p style="color: #f4f4f4;">Portfolios of similiar users</p>
+                  </div>
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <h2>99</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+          {{#ionItem class="item newsitem" path="channeldetail"  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-80" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Hot Stocks</h2>
+                      <p style="color: #f4f4f4;">Recent most popular stocks traded by other users</p>
+                  </div>
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <h2>99</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+          {{#ionItem class="item newsitem" path="channeldetail"  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      {{#if read}}
+                          <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                      {{else}}
+                          <i class="icon ion-checkmark-circled" style="color: #2a576e; font-size: 32px;"></i>
+                      {{/if}}
+                  </div>
+                  <div class="col col-80" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">German Stocks</h2>
+                      <p style="color: #f4f4f4;">Major German Stocks from DAX und MDax </p>
+                  </div>
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                        <h2>56</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+          {{#ionItem class="item newsitem" path="channeldetail"  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                          <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-80" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Best of  France</h2>
+                      <p style="color: #f4f4f4;">Best 30 French Stocks </p>
+                  </div>
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <h2>45</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+          {{#ionItem class="item newsitem" path="channeldetail"  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      {{#if read}}
+                          <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                      {{else}}
+                          <i class="icon ion-checkmark-circled" style="color: #2a576e; font-size: 32px;"></i>
+                      {{/if}}
+                  </div>
+                  <div class="col col-80" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">American Entertainment</h2>
+                      <p style="color: #f4f4f4;">Stocks from American Entertainment Industry</p>
+                  </div>
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <h2>12</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+      {{/ionList}}
+  {{/ionContent}}
+{{/ionView}}
+</template>

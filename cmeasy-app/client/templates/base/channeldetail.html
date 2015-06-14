@@ -1,0 +1,36 @@
+<template name="channeldetail">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton path="preferences"}}
+    {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+      <h1 class="title">fincommend</h1>
+  {{/contentFor}}
+  {{#ionView}}
+    {{#ionContent}}
+
+        <div class="padding">
+            <h2>Social</h2>
+            <p style="color: #ffbf00;">Similiar stocks from portfolio from other fincommend users</p>
+            <div class="row">
+                <div class="col">
+                    <h4>Ranking</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>99</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Country</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>Any</h4>
+                </div>
+            </div>
+            <button class="button button-full button-assertive">
+                Unsubscribe
+            </button>
+        </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

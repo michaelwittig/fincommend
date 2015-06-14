@@ -1,0 +1,338 @@
+$positive: #f8f8f8;
+$loading-font-size: 22px;
+$base-background-color: #334D5C;
+$light:   #fff !default;
+
+$assertive: #DF4949 !default;
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
+@import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
+
+.background, .background .pane, .background .item, .background .item-complex .item-content {
+  background-color: #334D5C;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #fcfcfc;
+}
+
+.ionic-body.platform-android {
+  font-family: "Roboto", sans-serif;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto", sans-serif;
+    color: #fcfcfc;
+  }
+
+  .tab-item {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+
+
+.ion-slide {
+  text-align: center;
+  padding-top: 200px;
+
+  &.dark-bg {
+    h3 {
+      color: #0e1d24;
+    }
+  }
+}
+
+.popover {
+  height: auto;
+}
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px !important;
+  }
+}
+
+.item h2 {
+  margin: 0px 0px 2px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.padleft{
+  padding-left: 10px;
+}
+
+.overview{
+  background: #f5f2f5;
+  background: -moz-linear-gradient(top, #f5f2f5 0%, #ededed 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f5f2f5), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, #f5f2f5 0%, #ededed 100%);
+  background: -o-linear-gradient(top, #f5f2f5 0%, #ededed 100%);
+  background: -ms-linear-gradient(top, #f5f2f5 0%, #ededed 100%);
+  background: linear-gradient(to bottom, #f5f2f5 0%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f2f5', endColorstr='#ededed', GradientType=0 );
+  border-bottom: 2px solid black;
+
+}
+
+.timeItem h2 {
+  margin: 0px 0px 2px;
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration:none;
+}
+
+
+
+a.timeItem {
+  color: inherit;
+  text-decoration: none;
+
+  @-webkit-keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+}
+
+  .smallh2 {
+    font-size: 16px;
+    color: #747474;
+  }
+
+  .row {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+  }
+
+  .instrumentrow {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .filled {
+    background: #dedede;
+    border-bottom: 2px solid rgba(80, 238, 46, 0.46);
+  }
+
+  .bartext {
+    margin-left: 8px;
+  }
+
+  .goal {
+    font-size: 22px;
+    color: #747474;
+    text-align: right;
+  }
+
+  //https://color.adobe.com/de/Flat-Design-Colors-v2-color-theme-4341903/edit/?copy=true&base=1&rule=Custom&selected=2&name=Kopie%20von%20Flat%20Design%20Colors%20v2&mode=hsv&rgbvalues=0.199999888832,0.3019601682245372,0.360784,0.27058783795999997,0.698039,0.6156862591214024,0.937255,0.7882359903542551,0.2980395919599999,0.8862749999999999,0.4784316084130131,0.24705890527500002,0.8745100000000001,0.28627434654000006,0.28627434654000006&swatchOrder=0,1,2,3,4
+  .navleft {
+    background: #2f4958;
+    background: -moz-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2f4958), color-stop(92%, #2f4958), color-stop(100%, #1C2938));
+    background: -webkit-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -o-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -ms-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: linear-gradient(to right, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f4958', endColorstr='#1C2938', GradientType=1);
+    border-color: #0e1d24;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .menu-left {
+    background: #2f4958;
+    background: -moz-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2f4958), color-stop(92%, #2f4958), color-stop(100%, #1C2938));
+    background: -webkit-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -o-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: -ms-linear-gradient(left, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    background: linear-gradient(to right, #2f4958 0%, #2f4958 92%, #1C2938 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f4958', endColorstr='#1C2938', GradientType=1);
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .selectlarge {
+    font-size: 18px;
+  }
+
+  .item-select select {
+    font-size: 18px;
+  }
+
+  .c3-line {
+    stroke-width: 3px;
+    color: white;
+  }
+
+  .c3-axis{
+    color: white;
+  }
+
+
+
+  .c3-chart-arcs .c3-chart-arcs-background {
+    fill: #E0E0E0;
+    stroke: none;
+  }
+
+  .c3-text.c3-empty {
+    fill: #FFF;
+    font-size: 2em;
+  }
+
+  .c3-chart-arcs .c3-chart-arcs-gauge-unit {
+    fill: #CCC;
+    font-size: 18px;
+  }
+
+  .c3-chart-arcs .c3-chart-arcs-background {
+    fill: #7e7e7e;
+    stroke: none;
+  }
+
+  .c3-chart-arcs .c3-gauge-value {
+    fill: #f5f5f5;
+    stroke: none;
+  }
+
+  .c3-chart-arc path {
+    stroke: #373737;
+  }
+
+  .bar .head {
+    font-size: 28px;
+  }
+
+  .button.button-positive:hover {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .button.button-positive {
+    border-color: #181e1c;
+    background-color: #090909;
+    color: #FFF;
+  }
+
+  .nav-view-transition-ios.nav-view-direction-forward,
+  .nav-view-transition-ios.nav-view-direction-back {
+    background-color: rgb(243, 243, 243);
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .question p {
+    font-size: 20px;
+  }
+
+  .panel-green, .partition-green {
+    background-color: #1FBBA6;
+    position: relative;
+    background-image: linear-gradient(to bottom, #23D1B9 0px, #1FBBA6 100%);
+    color: #FFF;
+  }
+
+  .panel-blue, .partition-blue {
+    background-color: #5F8295;
+    position: relative;
+    background-image: linear-gradient(to bottom, #6C8FA1 0px, #5F8295 100%);
+    color: #FFF;
+  }
+
+  .panel-red, .partition-red {
+    background-color: #E66B6B;
+    position: relative;
+    background-image: linear-gradient(to bottom, #EA8181 0px, #E66B6B 100%);
+    color: #FFF;
+  }
+
+  .panel-azure, .partition-azure {
+    background-color: #00BDCC;
+    position: relative;
+    background-image: linear-gradient(to bottom, #00D5E6 0px, #00BDCC 100%);
+    color: #FFF;
+  }
+
+  .panel-grey, .partition-azure {
+    background-color: #f1f1f1;
+    position: relative;
+    background-image: linear-gradient(to bottom, #e8e8e8 0px, #d7d7d7 100%);
+    color: #FFF;
+  }
+
+  .row .nomarg {
+    margin: 0px;
+    padding: 5px;
+  }
+
+  .col {
+    padding: 5px;
+    margin: 0px;
+  }
+
+  .newsitem {
+    margin: 0px;
+    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #334D5C;
+    position: relative;
+    background-image: linear-gradient(to bottom, #2f4958 0px, #284251 100%);
+    color: #FFF;
+    border: 0Px;
+    border-bottom: 1px solid #334D5C;
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: wrap;
+  }
+
+  .item h2 {
+    margin: 0px 0px 2px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .lighttext {
+    color: #698497;
+  }
+
+  .bar {
+    background-color: #334D5C;
+    color: white;
+    border-bottom: 1px solid #17232f;
+  }
+
+  .button-clear.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: rgb(248, 248, 248);
+  }
+
+  .item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: normal;
+  }
+
+  .smallicon .icon {
+    font-size: 20px;
+  }
+
+

@@ -1,0 +1,61 @@
+<template name="infos">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      <div class="button-bar">
+          <a class="button button-small button-assertive">Inbox</a>
+          <a class="button button-small ">Recent</a>
+          <a class="button button-small ">Best</a>
+      </div>
+
+      {{#ionList}}
+              {{#ionItem class="item newsitem" iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;" >16:45
+                  </div>
+                  <div class="col" style="text-align: left;">31.05
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      News
+                  </div>
+                  <div class="col  col-10 plus" style="text-align: center; color: white; font-size: 20px;">
+                      {{> ionIcon icon='plus'}}
+                  </div>
+                  <div class="col  col-10 minus" style="text-align: center; color: white; font-size: 20px;">
+                      {{> ionIcon icon='minus'}}
+                  </div>
+              </div>
+                  <div class="row nomarg">
+                      <div class="col col-10 padding checked" style="margin-right: 5px">
+                            {{#if read}}
+                                 <i class="icon ion-checkmark-circled" style="color: #ffbf00; font-size: 32px;"></i>
+                            {{else}}
+                                <i class="icon ion-checkmark-circled" style="color: #2a576e; font-size: 32px;"></i>
+                            {{/if}}
+                      </div>
+                      <div class="col col-90" style="text-align: left">
+                          <a href="{{pathfor 'infodetails'}}" class="nolink">
+                          <h2 style="color: #f8f8f8; text-decoration: none;">{{title}} {{ranking}}</h2>
+                          <p style="color: #f4f4f4; text-decoration: none;"> {{longText}}  </p>
+                      <p style="color: #636371; font-size: 10px;">Von Hans Flick </p></a>
+                      </div>
+
+                  </div>
+
+
+              {{/ionItem}}
+
+
+      {{/ionList}}
+
+  {{/ionContent}}
+{{/ionView}}
+</template>

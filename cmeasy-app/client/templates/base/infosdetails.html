@@ -1,0 +1,68 @@
+<template name="infodetails">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton path="/"}}
+    {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+      <h1 class="title">fincommend</h1>
+  {{/contentFor}}
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionItem class="item newsitem" path="picturenews"  iconRight=false}}
+          <div class="row nomarg lighttext">
+              <div class="col col-20" style="text-align: left; color: #EFC94C;">{{formatNumber score}}
+              </div>
+              <div class="col" style="text-align: left; ">14.06.15
+              </div>
+              <div class="col col-30" style="text-align: right;">
+                  fincommend
+              </div>
+              <div class="col  col-10 plus" style="text-align: center; color: white; font-size: 20px;">
+                  {{> ionIcon icon='plus'}}
+              </div>
+              <div class="col  col-10 minus" style="text-align: center; color: white; font-size: 20px;">
+                  {{> ionIcon icon='minus'}}
+              </div>
+          </div>
+      {{/ionItem}}
+        <div class="padding">
+            <h2>Buy Comdirect Bank</h2>
+            <div class="row">
+                <div class="col">
+                    <h4>Channel</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>cosres</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Ranking</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>0.53</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Instrument</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>Comdirect Bank</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Actual Price</h4>
+                </div>
+                <div class="col" style="text-align: right">
+                    <h4>22.32€</h4>
+                </div>
+            </div>
+
+            <button class="button button-full button-assertive">
+                Buy
+            </button>
+        </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

@@ -1,0 +1,128 @@
+<template name="trades">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      {{#ionList}}
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">08.06.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Trade
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                          <i class="icon ion-plus" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Buy20 Deutsche Bank for 26,45€</h2>
+                      <p style="color: #f4f4f4;">Based Best German </p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">12.05.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Trade
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                          <i class="icon ion-minus" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Sell 20 Suedzucker for 1,43€</h2>
+                      <p style="color: #f4f4f4;">Based Hot Stocks</p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">11.05.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Trade
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <i class="icon ion-minus" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Sell 20 Commerzbank for 11,02€</h2>
+                      <p style="color: #f4f4f4;">Based Best German</p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">05.04.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Fincommend
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Recommendation Sell Deutsche Bank</h2>
+                      <p style="color: #f4f4f4;">Based Social Portfolio</p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">21.03.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Trade
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-10 padding" style="margin-right: 5px">
+                      <i class="icon ion-minus" style="color: #ffbf00; font-size: 32px;"></i>
+                  </div>
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Sell 20 Cisco for 21,43€</h2>
+                      <p style="color: #f4f4f4;">Based Hot Stocks </p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+          {{#ionItem class="item newsitem" path="infodetails"  iconRight=false}}
+              <div class="row nomarg lighttext">
+                  <div class="col" style="text-align: left; color: #EFC94C;">02.02.15
+                  </div>
+                  <div class="col" style="text-align: right;">
+                      Fincommend
+                  </div>
+              </div>
+              <div class="row nomarg">
+                  <div class="col col-90" style="text-align: left">
+                      <h2 style="color: #f8f8f8;">Recommenddation Buy Deutsche Bank</h2>
+                      <p style="color: #f4f4f4;">Based Social Portfolio</p>
+                      <p style="color: #636371; font-size: 10px;"></p>
+                  </div>
+              </div>
+          {{/ionItem}}
+      {{/ionList}}
+  {{/ionContent}}
+{{/ionView}}
+</template>

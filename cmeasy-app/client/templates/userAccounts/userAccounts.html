@@ -1,0 +1,22 @@
+<template name="userAccounts">
+  {{#contentFor "headerButtonLeft"}}
+      <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+        {{> ionIcon icon='navicon'}}
+      </button>
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+      <h1 class="title">Willkommen</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#if currentUser}}
+        <div class="padding">
+          <button class="button button-positive button-block" data-action="logout">Abmelden</button>
+        </div>
+      {{else}}
+        {{> atForm}}
+      {{/if}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

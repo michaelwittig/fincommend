@@ -1,0 +1,64 @@
+<template name="settings">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      <div class="padding">
+         <h2 style="text-align: center">Time</h2>
+          <div class="row padding" style="font-size: 18px; margin-bottom: 20px; border-bottom: 1px solid ghostwhite;">
+              <div class="col" style="color: white;">Time Budget</div>
+              <div class="col" style="text-align: right">
+                  <select style="background-color: #334D5C; color: white;">
+                      <option>5min</option>
+                      <option selected>10min</option>
+                      <option>20min</option>
+                      <option>30min</option>
+                  </select>
+
+              </div>
+          </div>
+
+          <div class="row padding" style="font-size: 18px; margin-bottom: 20px; border-bottom: 1px solid ghostwhite;">
+              <div class="col" style="color: white;">Intervall</div>
+              <div class="col" style="text-align: right">
+                  <select style="background-color: #334D5C; color: white;">
+                      <option>Daily</option>
+                      <option selected>Weekly</option>
+                      <option>Monthly</option>
+                  </select>
+
+              </div>
+          </div>
+
+          <div class="row padding" style="font-size: 18px;">
+              <div class="col" style="color: white;">Social Portfolio</div>
+              <div class="col" style="text-align: right">
+                  <label class="toggle toggle-assertive">
+                      <input type="checkbox">
+                      <div class="track">
+                          <div class="handle"></div>
+                      </div>
+                  </label>
+              </div>
+          </div>
+        </div>
+
+
+
+      <div class="padding">
+          <h2 style="text-align: center">Register with figo</h2>
+
+          <a class="button button-full button-assertive" href="https://api.figo.me/auth/code?response_type=code&client_id=CRRJA2oa3vAhDAFgkjKmN5QffwKMORGWPc7xcGPAQ-JQ&scope=securities%3Dro&state=1">
+              Figo Login</a>
+          <p>Please register with Figo to get portfolio data inside fincommend. Please fill in with external API.</p>
+      </div>
+  {{/ionContent}}
+{{/ionView}}
+</template>

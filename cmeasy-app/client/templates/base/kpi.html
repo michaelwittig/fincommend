@@ -1,0 +1,41 @@
+<template name="kpi">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      <h2 style="text-align: center">KPIs</h2>
+      <div class="padding">
+          <div class="row">
+              <div class="col col-75">
+                  <h4>Time Efficiency Score</h4>
+              </div>
+              <div class="col" style="text-align: right">
+                  <h4>12,32</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col col-75">
+                  <h4>Portfolio Wert</h4>
+              </div>
+              <div class="col" style="text-align: right">
+                  <h4>22312,32</h4>
+              </div>
+          </div>
+
+          <h4>History</h4>
+        {{#ionList}}
+            {{> chartPlate}}
+         {{/ionList}}
+
+
+        </div>
+  {{/ionContent}}
+{{/ionView}}
+</template>

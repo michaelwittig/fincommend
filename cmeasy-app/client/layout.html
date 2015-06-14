@@ -1,0 +1,56 @@
+<template name="layout">
+  {{#ionBody}}
+    {{#ionSideMenuContainer side="left"}}
+      {{#ionSideMenus}}
+        {{#ionSideMenu side="left" class="navleft"}}
+                <div class="content ">
+                    <div class="list navleft">
+                        <a href="/"  class="timeItem">
+                            <div class=" item navleft  item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="paper-airplane"}}My Messages
+                            </div>
+                        </a>
+                        <a href="portfolio"  class="timeItem">
+                            <div class=" item navleft  item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="pie-graph"}}My Portfolio
+                            </div>
+                        </a>
+                        <a href="kpi" class="timeItem">
+                            <div class=" item  navleft item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="arrow-graph-up-right"}}My KPI
+                            </div>
+                        </a>
+                        <a href="preferences" class="timeItem">
+                            <div class=" item navleft item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="map" }}My Rules
+                            </div>
+                        </a>
+                        <a href="trades" class="timeItem">
+                            <div class=" item navleft  item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="stats-bars"}}My History
+                            </div>
+                        </a>
+                        <a href="settings" class="timeItem">
+                            <div class=" item navleft item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="settings" }}My Settings
+                            </div>
+                        </a>
+                        <a href="" class="timeItem">
+                            <div class=" item navleft  item-icon-left smallicon" data-ion-menu-close>
+                                {{> ionIcon icon="close"}}Close
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        {{/ionSideMenu}}
+      {{/ionSideMenus}}
+      {{#ionSideMenuContent}}
+        {{> ionNavBar class="bar"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+      {{/ionSideMenuContent}}
+    {{/ionSideMenuContainer}}
+  {{/ionBody}}
+</template>

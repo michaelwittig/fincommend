@@ -1,0 +1,61 @@
+<template name="portfolio">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">fincommend</h1>
+    {{/contentFor}}
+{{#ionView}}
+
+  {{#ionContent}}
+      {{#ionList}}
+          {{#ionItem class="item newsitem" path=""  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-40" style="color: white;">
+                        Instrument
+                  </div>
+                  <div class="col col-40" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">Price</h2>
+                  </div>
+                  <div class="col col-20" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">Value</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+          {{#each portfolios}}
+              {{#each portfolio}}
+                {{#ionItem class="item newsitem" path=""  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-50" style="color: #ffbf00;">
+                      {{name}}
+                  </div>
+                  <div class="col col-30" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">{{amount}}</h2>
+                  </div>
+                  <div class="col col-20" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">{{price}}</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+
+              {{/each}}
+          {{/each}}
+          {{#ionItem class="item newsitem" path=""  iconRight=false}}
+              <div class="row nomarg">
+                  <div class="col col-40" style="color: #ffbf00;">
+
+                  </div>
+                  <div class="col col-40" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">Total</h2>
+                  </div>
+                  <div class="col col-20" style="text-align: right">
+                      <h2 style="color: #f8f8f8;">12.312</h2>
+                  </div>
+              </div>
+          {{/ionItem}}
+      {{/ionList}}
+  {{/ionContent}}
+{{/ionView}}
+</template>
