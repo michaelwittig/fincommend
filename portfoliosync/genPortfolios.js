@@ -13,7 +13,7 @@ var mongoConnection='mongodb://' + mongohost + '/' + mongodb;
 mongoose.connect(mongoConnection);
 
 
-var PortfolioUsersModel = require("../model/portfolioUsersModel")(mongoose);
+var PortfolioUsersModel = require("../model/portfolioUsers")(mongoose);
 
 function run(cb) {
 	//fs.readFile("./isins.txt", {encoding: "utf8"}, function(err, data) {

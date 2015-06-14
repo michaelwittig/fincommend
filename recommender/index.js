@@ -127,7 +127,7 @@ function fetch() {
                 var message = data.Messages[0];
                 var body = JSON.parse(message.Body);
                 console.log("body", body);
-                recommend(body.userId, body.code, function(err) {
+                recommend(body.userId, function(err) {
                     if (err) {
                         console.log("can not recommend", err);
                         setTimeout(fetch, 1000);
@@ -152,13 +152,13 @@ function fetch() {
 }
 
 // auto fetch from queue
-//fetch();
+fetch();
 
 // manual
-recommend("KPwuZNECWHdrNpnp7", function(err, res) {
+/*recommend("KPwuZNECWHdrNpnp7", function(err, res) {
     if (err) {
         console.log("err", err);
     } else {
         console.log("done", res);
     }
-});
+});*/

@@ -15,7 +15,7 @@ var mongoConnection='mongodb://' + mongohost + '/' + mongodb;
 mongoose.connect(mongoConnection);
 
 
-var PortfolioUsersModel = require("../model/portfolioUsersModel")(mongoose);
+var PortfolioUsersModel = require("../model/portfolioUsers")(mongoose);
 
 function getPortfolio(token, cb) {
     console.log("getPortfolio", token);
@@ -45,8 +45,8 @@ function code2token(code, cb) {
         },
         json: {
             grant_type: "authorization_code",
-            code: code
-            //redirect_uri: "" TODO
+            code: code,
+            redirect_uri: "http://fincommend.com/figologin"
         }
     }, function(err, res, body) {
         if (err) {
@@ -109,14 +109,24 @@ function fetch() {
                         console.log("can not import Portfolio", err);
                         setTimeout(fetch, 1000);
                     } else {
-                        sqs.deleteMessage({
-                            QueueUrl: "https://sqs.eu-west-1.amazonaws.com/329669840512/cmeasy-portfoliosync",
-                            ReceiptHandle: message.ReceiptHandle
+                        sqs.sendMessage({
+                            MessageBody: JSON.stringify({
+                              userId: body.userId
+                            }),
+                            QueueUrl: "https://sqs.eu-west-1.amazonaws.com/329669840512/cmeasy-recommender",
                         }, function(err) {
                             if (err) {
-                                console.log("can not delete message", err);
+                              console.log("can not trigger recommender", err);
                             }
-                            setTimeout(fetch, 1000);
+                            sqs.deleteMessage({
+                                QueueUrl: "https://sqs.eu-west-1.amazonaws.com/329669840512/cmeasy-portfoliosync",
+                                ReceiptHandle: message.ReceiptHandle
+                            }, function(err) {
+                                if (err) {
+                                    console.log("can not delete message", err);
+                                }
+                                setTimeout(fetch, 1000);
+                            });
                         });
                     }
                 });
